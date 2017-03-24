@@ -1,0 +1,12 @@
+.col-centered {
+    margin: 0 auto;
+    float: none;
+}
+
+.hidden {
+    display: none;
+}
+
+#flightForm {
+    padding: 1em;
+}
