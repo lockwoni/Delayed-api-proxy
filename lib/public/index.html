@@ -3,64 +3,97 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Delayed | Home</title>
+    <title>Layover | Home</title>
     <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
-    <link type="text/css" rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/1.0.0/firebaseui.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/slate/bootstrap.min.css">
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
 
 <body>
-    <header id="navbar" class="my-object hidden">
-        <div class="container">
-            <div class="row">
-                <ul class="main-nav">
-                    <li><a href="">Flight Status</a></li>
-                    <li><a href="">Places to Eat</a></li>
-                    <li><a href="">Hotels</a></li>
-                    <li><a href="">Music</a></li>
+    <nav id="navbar" class="navbar navbar-default hidden">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#hotels">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="fltemplate.html">Layover</a>
+            </div>
+            <div class="collapse navbar-collapse" id="home">
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="flight-status.html">Flight Status<span class="sr-only">(current)</span></a></li>
+                    <li><a href="yelp-page.html">Food</a></li>
+                    <li><a href="#">Hotels</a></li>
+                    <li><a href="weather.html">Weather</a></li>
+                    <li><a href="#">Music</a></li>
                 </ul>
             </div>
-    </header>
-    <div class="row">
-        <div class="col-md-9 col-centered">
-            <div id="signIn" class="panel-default panel">
-                <div class="panel-heading">
-                    <h3 class="panel-title">Sign In</h3>
-                </div>
-                <div class="panel-body">
-                    <div id='firebaseui-auth-container'></div>
-                </div>
-            </div>
-            <div id="flightForm" class="panel-default panel hidden">
-                <div class="panel-body">
-                    <form>
-                        <div class="form-group">
-                            <label>Flight Carrier Code</label>
-                            <input class="form-control" id="flightCarrier">
-                        </div>
-                        <div class="form-group">
-                            <label>Flight Number</label>
-                            <input class="form-control" id="flightNum">
-                        </div>
-                        <div class="form-group">
-                            <label>Airport</label>
-                            <input class="form-control" id="departureAirport">
-                        </div>
-                        <div class="form-group">
-                            <label>Departure Date</label>
-                            <input class="form-control date" id="departureDate">
-                        </div>
-                        <button type="submit" class="btn btn-default" id="submit">Submit</button>
-                    </form>
-                </div>
-            </div>
         </div>
-        <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
-        <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
-        <script src="https://www.gstatic.com/firebasejs/3.7.3/firebase.js"></script>
-        <script src="https://cdn.firebase.com/libs/firebaseui/1.0.0/firebaseui.js"></script>
-        <script src="assets/javascript/firebase.js"></script>
+    </nav>
+    <!--original dropdown-->
+    <div class="dropdown" style="float: right">
+        <ul class="nav nav-pills">
+            <li class="dropdown">
+                <a class="dropdown-toggle" data-toggle="dropdown" href="#" aria-expanded="false">
+            Does Not Dropdown <span class="caret"></span>
+          </a>
+                <ul class="dropdown-menu">
+                    <li><a href="#">Flight Status</a></li>
+                    <li><a href="#">Food</a></li>
+                    <li><a href="#">Hotel</a></li>
+                    <li><a href="#">Weather</a></li>
+                    <li><a href="#">Music</a></li>
+                    <li class="divider"></li>
+                    <li><a href="#">Separated link</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+    <div id='firebaseui-auth-container'></div>
+    <div id='flightForm' class="container hidden">
+        <form class="form-horizontal">
+            <fieldset>
+                <legend>Legend</legend>
+                <div class="form-group">
+                    <label class="col-lg-2 control-label" for="focusedInput">Flight Carrier</label>
+                    <div class="col-lg-8">
+                        <input class="form-control" id="flightCarrier" type="text" placeholder="DL" kl_vkbd_parsed="true">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-lg-2 control-label" for="focusedInput">Flight Number</label>
+                    <div class="col-lg-8">
+                        <input class="form-control" id="flightNum" type="text" placeholder="1234" kl_vkbd_parsed="true">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-lg-2 control-label" for="focusedInput">Departure Airport</label>
+                    <div class="col-lg-8">
+                        <input class="form-control" id="departureAirport" type="text" placeholder="ATL" kl_vkbd_parsed="true">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-lg-2 control-label" for="focusedInput">Departure Date</label>
+                    <div class="col-lg-8">
+                        <input class="form-control" id="departureDate" type="date" placeholder="MM-DD-YY" kl_vkbd_parsed="true">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-lg-10 col-lg-offset-2">
+                        <button id='submitFlight' type="submit" class="btn btn-primary">Submit</button>
+                    </div>
+                </div>
+            </fieldset>
+        </form>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
+    <script src="https://cdn.firebase.com/libs/firebaseui/1.0.0/firebaseui.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/3.7.3/firebase.js"></script>
+    <script src="assets/javascript/firebase.js"></script>
 </body>
 
 </html>
