@@ -9,7 +9,7 @@
 
 #flightForm {
     padding: 1em;
-    background-image:linear-gradient(rgba(0, 0, 0, 0.7),rgba(0, 0, 0, 0.7)),url(splash.png);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(splash.png);
 }
 
 #firebaseui-auth-container {
