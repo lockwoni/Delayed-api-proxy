@@ -31,67 +31,74 @@
             </div>
         </div>
     </nav>
-    <div id='firebaseui-auth-container'></div>
-    <div class="row">
-        <div class="col-md-6 col-centered">
-            <div id='flightInfo'>
-                <div class="panel panel-primary">
-                    <div class="panel-heading">
-                        <h3 class="panel-title">Flight Info</h3>
+    <div class="container">
+        <div id="firebaseui-auth-container"></div>
+        <div class="row">
+            <div class="col-md-6 col-centered">
+                <div id="flightInfo">
+                    <div class="panel panel-primary">
+                        <div class="panel-heading">
+                            <h3 class="panel-title">Flight Info</h3>
+                        </div>
+                        <div class="panel-body">
+                            <table id="flightInfoBody" class="table">
+                                <thead>
+                                    <tr>
+                                        <th>Flight Carrier</th>
+                                        <th>Flight Number</th>
+                                        <th>Departure Airport</th>
+                                        <th>Departure Date</th>
+                                    </tr>
+                                </thead>
+                            </table>
+                        </div>
                     </div>
-                    <div class="panel-body">
-                        <table id='flightInfoBody' class="table">
-                            <thead>
-                                <tr>
-                                    <th>Flight Carrier</th>
-                                    <th>Flight Number</th>
-                                    <th>Departure Airport</th>
-                                    <th>Departure Date</th>
-                                </tr>
-                            </thead>
-                        </table>
-                    </div>
+                    <button id="resubmit" class="btn btn-default">Reset</button>
                 </div>
-                <button id="resubmit" class="btn btn-default">Reset</button>
             </div>
         </div>
+        <br>
+        <div class="row">
+        <div class="col-md-12">
+        <div id="flightForm" class="container hidden">
+            <form class="form-horizontal">
+                <fieldset>
+                    <div class="form-group">
+                        <label class="col-lg-2 control-label" for="focusedInput">Flight Carrier</label>
+                        <div class="col-lg-8">
+                            <input class="form-control" id="flightCarrier" type="text" placeholder="DL" kl_vkbd_parsed="true">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-lg-2 control-label" for="focusedInput">Flight Number</label>
+                        <div class="col-lg-8">
+                            <input class="form-control" id="flightNum" type="text" placeholder="1234" kl_vkbd_parsed="true">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-lg-2 control-label" for="focusedInput">Departure Airport</label>
+                        <div class="col-lg-8">
+                            <input class="form-control" id="departureAirport" type="text" placeholder="ATL" kl_vkbd_parsed="true">
+                        </div>
+                    </div>
+                    <div id="departure" class="form-group">
+                        <label class="col-lg-2 control-label" for="focusedInput">Departure Date</label>
+                        <div class="col-lg-8">
+                            <input class="form-control" id="departureDate" type="date" placeholder="MM-DD-YY" kl_vkbd_parsed="true">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-lg-10 col-lg-offset-2">
+                            <button id="submitFlight" type="submit" class="btn btn-primary">Submit</button>
+                        </div>
+                    </div>
+                </fieldset>
+            </form>
+            </div>
+            </div>
+        </div>
+        <div id="warning"></div>
     </div>
-    <div id='flightForm' class="container hidden">
-        <form class="form-horizontal">
-            <fieldset>
-                <div class="form-group">
-                    <label class="col-lg-2 control-label" for="focusedInput">Flight Carrier</label>
-                    <div class="col-lg-8">
-                        <input class="form-control" id="flightCarrier" type="text" placeholder="DL" kl_vkbd_parsed="true">
-                    </div>
-                </div>
-                <div class="form-group">
-                    <label class="col-lg-2 control-label" for="focusedInput">Flight Number</label>
-                    <div class="col-lg-8">
-                        <input class="form-control" id="flightNum" type="text" placeholder="1234" kl_vkbd_parsed="true">
-                    </div>
-                </div>
-                <div class="form-group">
-                    <label class="col-lg-2 control-label" for="focusedInput">Departure Airport</label>
-                    <div class="col-lg-8">
-                        <input class="form-control" id="departureAirport" type="text" placeholder="ATL" kl_vkbd_parsed="true">
-                    </div>
-                </div>
-                <div id='departure' class="form-group">
-                    <label class="col-lg-2 control-label" for="focusedInput">Departure Date</label>
-                    <div class="col-lg-8">
-                        <input class="form-control" id="departureDate" type="date" placeholder="MM-DD-YY" kl_vkbd_parsed="true">
-                    </div>
-                </div>
-                <div class="form-group">
-                    <div class="col-lg-10 col-lg-offset-2">
-                        <button id='submitFlight' type="submit" class="btn btn-primary">Submit</button>
-                    </div>
-                </div>
-            </fieldset>
-        </form>
-    </div>
-    <div id='warning'></div>
     <!--Adding scripts-->
     <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
