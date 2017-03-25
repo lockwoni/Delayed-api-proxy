@@ -1,0 +1,27 @@
+.col-centered {
+    margin: 0 auto;
+    float: none;
+}
+
+.hidden {
+    display: none;
+}
+
+#flightForm {
+    padding: 1em;
+}
+
+#firebaseui-auth-container {
+    position: relative;
+    overflow: auto;
+    top: 50vh;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#warning {
+    position: relative;
+    text-align: center;
+    overflow: auto;
+    color: red;
+}
