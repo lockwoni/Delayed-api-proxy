@@ -4,20 +4,44 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Layover | Flight Info</title>
-	<script src="https://www.gstatic.com/firebasejs/3.7.1/firebase.js"></script>
-    <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
 	<link rel="stylesheet" type="text/css" href="assets/css/reset.css">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://bootswatch.com/slate/bootstrap.min.css">
 	<link rel="stylesheet" href="assets/css/style.css">	
 </head>
 
 <body>
+	<nav id="navbar" class="navbar navbar-default hidden">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#home">
+                    <span class="sr-only">Toggle navigation</span>
+                </button>
+                <a class="navbar-brand" href="index.html">Layover</a>
+            </div>
+            <div class="collapse navbar-collapse" id="home">
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="flight-status.html">Flight Status<span class="sr-only">(current)</span></a></li>
+                    <li><a href="yelp-page.html">Food + Drinks</a></li>
+                    <li><a href="#">Hotels</a></li>
+                    <li><a href="weather.html">Weather</a></li>
+                    <li><a href="#">Music</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
 	<div class="container">
-		<div id="flight-container" class="jumbotron">
+		<div id="flight-container">
 		</div>
 	</div>
 
+	<!--Adding scripts-->
+	<script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
+	<script src="https://cdn.firebase.com/libs/firebaseui/1.0.0/firebaseui.js"></script>
 	<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/3.7.3/firebase.js"></script>
+	<script src="assets/javascript/firebase.js"></script>
 	<script type="text/javascript" src="assets/javascript/flight-status.js"></script>
 </body>
 </html>
