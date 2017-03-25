@@ -25,3 +25,16 @@
     overflow: auto;
     color: red;
 }
+
+#resubmit {
+    float: right;
+}
+
+td {
+    padding: 1em;
+    text-align: center;
+}
+
+th {
+    text-align: center;
+}

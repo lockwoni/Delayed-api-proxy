@@ -33,29 +33,31 @@
     <div id='firebaseui-auth-container'></div>
     <div class="row">
         <div class="col-md-6 col-centered">
-            <div id='flightInfo' class="hidden">
+            <div id='flightInfo'>
                 <div class="panel panel-primary">
                     <div class="panel-heading">
                         <h3 class="panel-title">Flight Info</h3>
                     </div>
-                    <div id='flightInfoBody' class="panel-body">
-                        <table class="table">
-                            <tr>
-                                <th>Flight Carrier</th>
-                                <th>Flight Number</th>
-                                <th>Departure Airport</th>
-                                <th>Departure Date</th>
-                            </tr>
+                    <div class="panel-body">
+                        <table id='flightInfoBody' class="table">
+                            <thead>
+                                <tr>
+                                    <th>Flight Carrier</th>
+                                    <th>Flight Number</th>
+                                    <th>Departure Airport</th>
+                                    <th>Departure Date</th>
+                                </tr>
+                            </thead>
                         </table>
                     </div>
                 </div>
+                <button id="resubmit" class="btn btn-default">Reset</button>
             </div>
         </div>
     </div>
     <div id='flightForm' class="container hidden">
         <form class="form-horizontal">
             <fieldset>
-                <legend>Legend</legend>
                 <div class="form-group">
                     <label class="col-lg-2 control-label" for="focusedInput">Flight Carrier</label>
                     <div class="col-lg-8">
