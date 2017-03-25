@@ -7,6 +7,7 @@
     <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/slate/bootstrap.min.css">
+    <link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/1.0.0/firebaseui.css">
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
 
@@ -75,7 +76,7 @@
                         <input class="form-control" id="departureAirport" type="text" placeholder="ATL" kl_vkbd_parsed="true">
                     </div>
                 </div>
-                <div class="form-group">
+                <div id='departure' class="form-group">
                     <label class="col-lg-2 control-label" for="focusedInput">Departure Date</label>
                     <div class="col-lg-8">
                         <input class="form-control" id="departureDate" type="date" placeholder="MM-DD-YY" kl_vkbd_parsed="true">
@@ -91,8 +92,8 @@
     </div>
     <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
-    <script src="https://cdn.firebase.com/libs/firebaseui/1.0.0/firebaseui.js"></script>
     <script src="https://www.gstatic.com/firebasejs/3.7.3/firebase.js"></script>
+    <script src="https://cdn.firebase.com/libs/firebaseui/1.0.0/firebaseui.js"></script>
     <script src="assets/javascript/firebase.js"></script>
 </body>
 
